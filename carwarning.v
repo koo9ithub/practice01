@@ -18,7 +18,7 @@ module	carWarning(Alarm, DoorClose, Ignition, SeatBelt);
 	wire		Node2		;
 
 	and		AND_U0(Node1, DoorOpened, Ignition)	;
-	and		AND_U1(NoSeatBelt, SeatBelt)		;
+	and		AND_U1(Node2, NoSeatBelt, Ignition)		;
 
 	or		OR_U0(Alarm, Node1, Node2)		;
 
@@ -90,7 +90,7 @@ module	carWarning3(Alarm, DoorClose, Ignition, SeatBelt);
 
 	always @(Node1 or Node2)	begin
 		Alarm		= Node1 | Node2		;
-	end
+	end								//or gate
 
 endmodule
 
