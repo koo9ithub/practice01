@@ -4,11 +4,23 @@ module	tb	;
 	reg		Ignition	;
 	reg		SeatBelt	;
 	
-	wire		Alarm		;
+	wire		Alarm1		;
+	wire		Alarm2		;
+	wire		Alarm3		;
 	
-	carWarning3	DUT2(	.Alarm		( Alarm		), 
+	carWarning	DUT1(	.Alarm		( Alarm1	), 
 				.DoorClose	( DoorClose	), 
 				.Ignition	( Ignition	), 
+				.SeatBelt	( SeatBelt	));
+
+	carWarning2	DUT2(	.Alarm		( Alarm2	), 
+				.DoorClose	( DoorClose	), 
+				.Ignition	( Ignition	), 
+				.SeatBelt	( SeatBelt	));
+
+	carWarning3	DUT3(	.Alarm		( Alarm3	), 
+				.DoorClose	( DoorClose	), 
+				.Ignition	( Ignition	),   
 				.SeatBelt	( SeatBelt	));
 
 	initial begin
