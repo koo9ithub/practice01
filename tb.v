@@ -6,7 +6,7 @@ module	tb	;
 	
 	wire		Alarm		;
 	
-	carWarning	DUT0(	.Alarm		( Alarm		), 
+	carWarning3	DUT2(	.Alarm		( Alarm		), 
 				.DoorClose	( DoorClose	), 
 				.Ignition	( Ignition	), 
 				.SeatBelt	( SeatBelt	));

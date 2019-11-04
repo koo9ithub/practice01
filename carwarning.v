@@ -82,7 +82,7 @@ module	carWarning3(Alarm, DoorClose, Ignition, SeatBelt);
 
 	reg		Node2	;
 
-	always @(DoorOpened or Ignition)	begin
+	always @(NoSeatBelt or Ignition)	begin
 		Node2		= NoSeatBelt & Ignition	;
 	end								//and gate
 
